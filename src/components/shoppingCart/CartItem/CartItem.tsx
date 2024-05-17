@@ -34,7 +34,7 @@ export default function CartItem({
     setItemQuantity(quantity);
   }, [quantity, setItemQuantity]);
 
-  const handelClickCheckBox = () => {
+  const handleClickCheckBox = () => {
     getIsChecked(cartItemId) ? uncheckId(cartItemId) : checkId(cartItemId);
   };
 
@@ -57,7 +57,7 @@ export default function CartItem({
   return (
     <Styled.CartItemContainer>
       <Styled.CardItemHeader>
-        <CheckBox isChecked={getIsChecked(cartItemId)} onClick={handelClickCheckBox} />
+        <CheckBox isChecked={getIsChecked(cartItemId)} onClick={handleClickCheckBox} />
         <DeleteItemButton buttonText="삭제" onClick={handleClickDeleteButton} />
       </Styled.CardItemHeader>
       <Styled.CardItemContent>
